@@ -1,2 +1,10 @@
 info:
   description: CAS Configuration
+
+server:
+  port: 10443
+
+cas:
+  authn:
+    accept:
+      users: sheik::recap

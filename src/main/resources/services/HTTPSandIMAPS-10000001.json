@@ -1,6 +1,6 @@
 {
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "^(http?|https?|imaps?)://localhost:9091/.*",
+  "serviceId" : "^(http?|https?|imaps?)://.*",
   "name" : "HTTP",
   "id" : 10000001,
   "description" : "This service definition authorizes all application urls that support HTTP protocols.",

@@ -7,4 +7,4 @@ server:
 cas:
   authn:
     accept:
-      users: sheik::recap
+      users: sheik::recap,sachin::recap,srini::recap,prem::recap

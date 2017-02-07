@@ -2,7 +2,7 @@ info:
   description: CAS Configuration
 
 server:
-  port: 10443
+  port: 8443
 
 cas:
   authn:

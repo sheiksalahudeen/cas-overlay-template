@@ -68,9 +68,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.jasig.cas</groupId>
-            <artifactId>cas-server-support-jdbc</artifactId>
-            <version>4.2.7</version>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-jdbc-drivers</artifactId>
+            <version>${cas.version}</version>
         </dependency>
 
         <dependency>

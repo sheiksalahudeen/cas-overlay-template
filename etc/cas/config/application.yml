@@ -3,8 +3,3 @@ info:
 
 server:
   port: 8443
-
-#cas:
-#  authn:
-#    accept:
-#      users: sheik::recap,sachin::recap,srini::recap,prem::recap

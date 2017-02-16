@@ -2,48 +2,24 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:c="http://www.springframework.org/schema/c"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xmlns:sec="http://www.springframework.org/schema/security"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
-       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
-       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                        http://www.springframework.org/schema/mvc
+                        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+                        http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-   <!-- <bean id="serviceRegistryDao" class="org.jasig.cas.services.JpaServiceRegistryDaoImpl"
-          p:entityManagerFactory-ref="entityManagerFactory" />
+   <aop:aspectj-autoproxy/>
 
-    &lt;!&ndash; This is the EntityManagerFactory configuration for Hibernate &ndash;&gt;
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="jpaVendorAdapter">
-            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-                <property name="generateDdl" value="true"/>
-                <property name="showSql" value="true" />
-            </bean>
-        </property>
-        <property name="jpaProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
-            </props>
-        </property>
-    </bean>
 
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
+   <context:component-scan base-package="org.recap"/>
 
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+   <bean id="applicationContextProvider" class="org.recap.spring.ApplicationContextProvider"/>
 
-    <bean
-            id="dataSource"
-            class="org.apache.commons.dbcp.BasicDataSource"
-            p:driverClassName="com.mysql.jdbc.Driver"
-            p:url="jdbc:mysql://scsb-tst-mysql:3306/recapcas?autoReconnect=true"
-            p:password="root"
-            p:username="root" />
-    -->
 </beans>
